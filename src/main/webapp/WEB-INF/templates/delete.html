@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="utf-8">
+    <title>Recettes de l'étudiant</title>
+    <link rel="stylesheet" type="text/css" href="css/cssProjetPersonnel.css">
+</head>
+    <body>
+    <div th:insert="~{fragments::header}"></div>
+
+    <p>Vous etes sur de vouloir supprimer la recette <strong th:text="${recette.getNom()}"></strong> ?</p>
+    <button><a th:href="'delete?confirm=true&id='+${recette.id}" >OUI</a></button> <button><a href="plat">NON</a></button>
+
+    <footer th:insert="~{fragments::footer}"></footer>
+</body>
+
+</html>

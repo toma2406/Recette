@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Fragments</title>
+</head>
+<body>
+
+    <div th:fragment="header">
+        <header>
+            <h1>Recettes de l'étudiant</h1>
+            <p> Voici un site avec pleins d'idées de recettes pour les étudiants ! </p>
+        </header>
+        <nav>
+            <button class="button" style="vertical-align:middle"><span><a href="home">Accueil</a></span></button>
+            <button class="button" style="vertical-align:middle"><span><a href="plat" >Recettes</a></span></button>
+            <button class="button" style="vertical-align:middle"><span><a href="ajouterUneRecette">Ajouter une recette</a></span></button>
+            <button class="button" style="vertical-align:middle"><span><a href="ajouterProfil">Ajouter son Profil</a></span></button>
+            <button class="button" style="vertical-align:middle"><span><a href="profil-Etudiant">Profil d'étudiant</a></span></button>
+        </nav>
+    </div>
+
+    <footer th:fragment="footer">
+        <hr width="100%" color = "black">
+        <p> Réalisation : Thomas CHevalier pour le projet de developpement web </p>
+    </footer>
+
+
+</body>
+</html>

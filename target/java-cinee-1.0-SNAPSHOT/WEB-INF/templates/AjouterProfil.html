@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+    <head>
+        <meta charset="utf-8">
+        <title>Recettes de l'étudiant</title>
+        <link rel="stylesheet" type="text/css" href="css/cssProjetPersonnel.css">
+    </head>
+    <div th:insert="~{fragments::header}"></div>
+<body>
+<h1> Mon profil étudiant ! </h1>
+
+<form method="post" Accept-charset = "UTF-8">
+    <h2>Prénom</h2><br>
+    <input class="nomdelarecette" type="text" name="Prenom"><br>
+    <h2>Nom</h2>
+    <input class="nomdelarecette" type="text" name="Nom"><br>
+    <h2>Pseudo</h2>
+    <input class="nomdelarecette" type="text" name="Pseudo"><br>
+    <h2>Age :</h2>
+    <input class="nomdelarecette" type="text" name="Age"><br>
+    <h2>Ecole :</h2>
+    <input class="nomdelarecette" type="text" name="Ecole"><br>
+    <input class="valide" type="submit" name="Valider ma recette">
+</form>
+</body>
+    <footer th:insert="~{fragments::footer}"></footer>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
+<head>
+  <meta charset="utf-8">
+  <title>Recettes de l'étudiant</title>
+  <link rel="stylesheet" type="text/css" href="css/cssProjetPersonnel.css">
+    <script type="text/javascript" src="JS/JS.js"></script>
+</head>
+<body>
+    <div th:insert="~{fragments::header}"></div>
+
+<section>
+    <h2>Liste des Recettes ! </h2>
+    <h1>Nombre de recette : (<span id="nbrRecettes"></span>)</h1>
+    <th:block th:each="recette : ${recettesList}">
+    <h1 th:text="${recette.getNom()}">La recette du croque monsieur</h1>
+        <figure class="image" id="croque" ><img class="image2"th:src="'image?id='+${recette.id}"> </figure>
+        <figure class="bar-icon">
+            <a th:href="'Modifier?id='+${recette.id}" ><img class="icon" src="img/icon-modifier.jpg"></a> <a th:href="'delete?id='+${recette.id}"><img class="icon" src="img/icon-supprimer.png"></a>
+        </figure>
+        <div class="ingredient" >
+        <h1 th:text="${recette.getType()}" ></h1>
+        <p>Ingrédients :</p>
+          <ul th:text="${recette.getIngredients()}">
+          </ul>
+        <div>
+        </div>
+        </div>
+        <div class="recette">
+        <p>
+            <p th:text="${recette.getDifficulte()}">Dificulté : Facile</p>
+        <ul th:text="${recette.getText()}">
+        </ul> </p>
+        </div>
+        <hr width="50%" color = "black">
+    </th:block>
+    </div>
+
+
+  </section>
+    <footer th:insert="~{fragments::footer}"></footer>
+
+</body>
+</html>

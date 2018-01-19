@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<head>
+	<meta charset="utf-8">
+	<title>Recettes de l'étudiant</title>
+	<link rel="stylesheet" type="text/css" href="css/cssProjetPersonnel.css">
+</head>
+    <body>
+	<div th:insert="~{fragments::header}"></div>
+    <h1>Les profils des étudiants chef-cuisto ! </h1>
+    <th:block th:each="profil : ${profilsList}">
+    <section>
+    <div>
+    	<figure class="image"><img src="img/icon.png"></figure>
+    	<div class="profil">
+    		<li th:text="${profil.getPrenom()}">Prénom :</li>
+    		<li th:text="${profil.getNom()}">Nom :</li>
+    		<li th:text="${profil.getAge()}"> Age : </li>
+    		<li th:text="${profil.getEcole()}">Ecole :</li>
+    	</p>
+    	</div>
+    </div>
+    </section>
+    </th:block>
+</body>
+
+<footer th:insert="~{fragments::footer}"></footer>
+
+
+</html>

@@ -1,0 +1,205 @@
+header h1 {
+	font-size: 50px; /* Taille du caractère */
+	border-color: black ; /* couleur de bordure */ 
+  font-family:"Give You What You Like - TTF"; /* Plice de caractére */ 
+
+}
+
+body{
+  font-family: Arial , sans-serif ; /* police de caractere du body */ 
+}
+
+h1 {
+	text-align: center; /* text aligné au centre */ 
+	font-size: 30px; /* taille de la police de 30pixels */
+  font-family:"Give You What You Like - TTF";
+}
+h2{
+  text-align: center;
+  font-size: 35px;
+  font-family:"Give You What You Like - TTF";
+}
+
+a { 
+  color: black ; /* couleur du text en noir */
+	text-decoration: none; /* pas de soulignement des liens */
+ }
+header{
+	  text-align: center ;/* text aligné au centre */ 
+	  background-image: url("/img/photo-header.jpg") ; /* image de fond du header*/
+    font-size: 20px; /* Taille du caractère */
+  	background-position: center; /* position de l'image de fond au centre */ 
+  	background-repeat: no-repeat; /* l'image ne se repète */
+  	background-size: cover; /* l'image couvre toute la surface */ 
+    height: 100%; 
+    position: relative;
+}
+
+nav{
+   background:#e6e6e6; /* couleur de la bar de navigation */ 
+   border-radius: 5px; /* bordure arrondie de 5 pixels */
+   width: 100%; /* la barre de navgation prend toute la largeure */
+   position: sticky;
+   padding: 3px ; 
+   top: 0 ;
+   text-align: center;
+}
+
+@font-face {
+	font-family: "Give You What You Like - TTF"; 
+	src: url('/Font/Give You What You Like - TTF.ttf'); /* source de la police */
+}
+
+div{
+	overflow: hidden; /* Le contenu est rogné */ 
+   /* l'image et le texte son sur le même niveau en hauteur */ 
+}
+
+.image2{
+  border-radius: 20% ; /* arrondi de l'image */ 
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); /* effet d'ombre sur l'image */ 
+  width: 200px;
+  height: 200px; 
+}
+
+.icon{
+  width: 30px;
+  height: 30px;  
+}
+
+.bar-icon {
+  float: right;
+  width: 20%; 
+}
+
+section{
+	font-size: 20px;
+}
+
+footer {
+	text-align: center;
+}
+form {	
+	font-size: 15px ;
+	text-align: center;
+  background-color: #f2f2f2;
+  padding: 20px;
+  margin-right: 15%; 
+  margin-left : 15%;
+  border-radius: 15px;  
+}
+textarea, select { 
+ 	width: 100% ; 
+  }
+footer {
+	font-size: 15px;
+}
+input[type=submit]{
+	height: 50px;
+	width: 200px;
+}
+.difficulté{
+	font-size: 15px ;
+  margin: 20px;
+
+}
+
+.button {
+  border-radius: 4px;
+  text-align: center;
+  transition: all 0.5s;
+  cursor: pointer;
+  border-right: 1px solid #bbb;
+  padding: 3px;
+  font-size: 20px;
+  background-color: #d9d9d9 ;
+ 
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\1F374'; 
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 20px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+textarea, select{
+  width: 50% ; 
+  padding: 16px 20px;
+  border: none;
+  border-radius: 4px;
+  background-color:#e6e6e6;
+}
+
+.nomdelarecette{
+  width: 50%;
+  padding: 16px 20px;
+  border: none;
+  border-radius: 4px;
+  background-color:#e6e6e6;
+}
+
+.image{
+  float: left; 
+
+}
+.profil{
+  margin-right: 15%;
+}
+
+.ingredient{
+  float: top;
+  margin-right: 15%;
+  margin-bottom: 10px;
+}
+.recette{
+  margin-right: 10%;
+  margin-left: 10%; 
+  margin-bottom: 5%;
+}
+
+
+figure p{
+  border: solid;
+  border-color: black ;
+  border-radius: 15px; 
+  text-align: center;
+}
+
+.image:hover .tooltiptext {
+  background-color: black;  
+  visibility: visible;
+}
+
+.tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+
+}
+
+.valide{
+  margin-top: 20px;
+}

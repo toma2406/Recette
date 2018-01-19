@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <title>Recettes de l'étudiant</title>
+    <link rel="stylesheet" type="text/css" href="css/cssProjetPersonnel.css">
+</head>
+
+<div th:insert="~{fragments::header}"></div>
+<body>
+<form method="post" enctype="multipart/form-data" Accept-charset = "UTF-8">
+    <h2>Nom de la recette:</h2><br>
+    <input class="nomdelarecette" type="text" name="Nom" th:value="${recette.getNom()}"><br>
+    <h2>Type de la recette :</h2>
+    <select name="Type">
+        <option value="Entrée">Entrée</option>
+        <option value="Plat">Plat</option>
+        <option value="Dessert">Dessert</option>
+    </select>
+    <h2>La recette :</h2>
+    <textarea name="Text" rows="10" cols="100">[[${recette.getText()}]]</textarea>
+    <h2>Les ingrédients :</h2>
+    <textarea name="Ingredients" rows="10" cols="50" >[[${recette.getIngredients()}]]</textarea>
+    <h2>L'image :</h2>
+    <input type="file" name="image" id="inputimage">
+    <div class=difficulté>
+        <h2>Difficulté :</h2>
+        <label for="Débutant">Débutant</label>
+        <input type="radio" name="Difficulte" id="Débutant" value="Débutant">
+        <label for="Intermédiare">Intermédiare</label>
+        <input type="radio" name="Difficulte" id="Intermédiare" value="Intermédiaire">
+        <label for="Confirmé">Confirmé</label>
+        <input type="radio" name="Difficulte" id="Confirmé" value="Confirmé"><br>
+    </div>
+    <input type="submit" name="Valider ma recette">
+</form>
+
+</body>
+</html>

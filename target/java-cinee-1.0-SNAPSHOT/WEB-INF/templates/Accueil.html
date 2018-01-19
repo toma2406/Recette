@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
+<head>
+	<meta charset="utf-8">
+	<title>Recettes de l'étudiant</title>
+	<link rel="stylesheet" type="text/css" href="css/cssProjetPersonnel.css">
+</head>
+<body>
+	<div th:insert="~{fragments::header}"></div>
+	<section>
+        <h2> Voici les recettes</h2>
+        <th:block th:each="recette : ${recettesList}">
+            <figure class="image"><a href="plat"><img  class="image2" th:src="'image?id='+${recette.id}"><p class="lienrecette" th:text="${recette.getNom()}"> Wrap au poulet</p><span class="tooltiptext">Cliquez !</span></figure>
+		</th:block>
+    </section>
+
+	<footer th:insert="~{fragments::footer}"></footer>
+
+</body>
+</html>
